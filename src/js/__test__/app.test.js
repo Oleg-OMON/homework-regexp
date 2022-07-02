@@ -1,7 +1,7 @@
 import Validator from "../app";
 test('Получим наше имя', () => {
     const validator = new Validator();
-    const result = validator.validateUsername('w111R-e_y3a');
+    const result = validator.validateUsername('w11R-e_y3a');
     expect(result).toBe('w11R-e_y3a');
   });
   
