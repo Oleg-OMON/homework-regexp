@@ -1,4 +1,4 @@
-
+/* eslint-disable no-useless-escape */
 export default class Validator{
 
     validateUsername(name) {
@@ -7,17 +7,17 @@ export default class Validator{
         const reBeginningEnding = /^[\d\-\_]|[\d\-\_]$/
 
 
-    if (str.search(re) === -1){
+    if (name.search(re) === -1){
             throw new Error('Допустимы только латинские буквы, символы тире -,                       подчёркивания _ и цифры (0-9)');
         }
         
     
-    if (str.match(reNumbers) !== null){
+    if (name.match(reNumbers) !== null){
         throw new Error('Имя не должно содержать подряд более трёх цифр');
     }
     
 
-    if (str.match(reBeginningEnding) !== null){
+    if (neme.match(reBeginningEnding) !== null){
         throw new Error('Имя не должно  начинаться и заканчиваться цифрами, символами подчёркивания или тире');
     }
     
