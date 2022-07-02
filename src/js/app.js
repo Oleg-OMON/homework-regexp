@@ -19,10 +19,24 @@ export default class Validator{
         if (name.match(reBeginningEnding) !== null){
             throw new Error('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
         }
+
+    
         
         this.name = name;
         return this.name;
         
+    }
+    
+    validity(phone) {
+        if (/[\s-()]/.test(phone)) {
+            phone = phone.replace(/[\s-()]/g, "");
+        }
+        if (/^8/.test(phone)) {
+            phone = phone.replace(/^8/g, "+7");
+        }
+
+        this.phone = phone;
+        return this.phone;
     }
 
 }
