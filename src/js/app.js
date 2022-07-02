@@ -1,14 +1,13 @@
 /* eslint-disable no-useless-escape */
 export default class Validator{
-
     validateUsername(name) {
-        const reNumbers = /\d{3}/;
-        const re = /^[a-zA-Z0-9\_\-]+$/;
-        const reBeginningEnding = /^[\d\-\_]|[\d\-\_]$/
+    const reNumbers = /\d{3}/;
+    const re = /^[a-zA-Z0-9\_\-]+$/;
+    const reBeginningEnding = /^[\d\-\_]|[\d\-\_]$/
 
 
     if (name.search(re) === -1){
-            throw new Error('Допустимы только латинские буквы, символы тире -,подчёркивания _ и цифры (0-9)');
+        throw new Error('Допустимы только латинские буквы, символы тире -, подчёркивания _ и цифры (0-9)');
         }
         
     
