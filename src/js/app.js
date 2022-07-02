@@ -17,7 +17,7 @@ export default class Validator{
     }
     
 
-    if (neme.match(reBeginningEnding) !== null){
+    if (name.match(reBeginningEnding) !== null){
         throw new Error('Имя не должно  начинаться и заканчиваться цифрами, символами подчёркивания или тире');
     }
     
