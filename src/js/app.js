@@ -11,7 +11,7 @@ export default class Validator{
             }
             
         
-        if (name.match(reNumbers) !== null){
+        if (name.match(reNumbers) === 0){
             throw new Error('Имя не должно содержать подряд более трёх цифр');
         }
         
