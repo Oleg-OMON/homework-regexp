@@ -26,22 +26,22 @@ test('Получим наше имя', () => {
   test('Имя не должно  начинаться цифрами, символами подчёркивания или тире', () => {
     const validator = new Validator();
     const result = () => validator.validateUsername('1w11R-e_y3a');
-    expect(result).toThrow('Имя не должно  начинаться цифрами, символами подчёркивания или тире');
+    expect(result).toThrow('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
   });
   
   test('Имя не должно  заканчиваться цифрами, символами подчёркивания или тире', () => {
     const validator = new Validator();
     const result = () => validator.validateUsername('w11R-e_y3a4');
-    expect(result).toThrow('Имя не должно  заканчиваться цифрами, символами подчёркивания или тире');
+    expect(result).toThrow('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
   });
   test('Имя не должно  начинаться цифрами, символами подчёркивания или тире', () => {
     const validator = new Validator();
     const result = () => validator.validateUsername('-w1R-e_y3a');
-    expect(result).toThrow('Имя не должно  начинаться цифрами, символами подчёркивания или тире');
+    expect(result).toThrow('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
   });
   
   test('Имя не должно  заканчиваться цифрами, символами подчёркивания или тире', () => {
     const validator = new Validator();
     const result = () => validator.validateUsername('w1R-e_y3a_');
-    expect(result).toThrow('Имя не должно  заканчиваться цифрами, символами подчёркивания или тире');
+    expect(result).toThrow('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
   });

@@ -8,7 +8,7 @@ export default class Validator{
 
 
     if (name.search(re) === -1){
-            throw new Error('Допустимы только латинские буквы, символы тире -,                       подчёркивания _ и цифры (0-9)');
+            throw new Error('Допустимы только латинские буквы, символы тире -,подчёркивания _ и цифры (0-9)');
         }
         
     
@@ -18,7 +18,7 @@ export default class Validator{
     
 
     if (name.match(reBeginningEnding) !== null){
-        throw new Error('Имя не должно  начинаться и заканчиваться цифрами, символами подчёркивания или тире');
+        throw new Error('Имя не должно начинаться и заканчиваться цифрами, символами подчёркивания или тире');
     }
     
     this.name = name;
